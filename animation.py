@@ -34,7 +34,7 @@ timeConverter = 0.01
 intervalTime = 100
 
 fpsNumber = 10
-animationName = 'aaaa-gauss6'
+animationName = 'animation_1'
 directory = './animations/'
 bitRate = 1200
 

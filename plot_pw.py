@@ -7,7 +7,7 @@ import os
 #   0	  1			 2				 3			 4
 # SIGMA ENERGY POTENTIAL_WIDTH  TRANSMISSION REFLECTION
 
-ImportedData = np.loadtxt('../data/5.txt', delimiter=' ', dtype=float)
+ImportedData = np.loadtxt('../data/data_file.txt', delimiter=' ', dtype=float)
 
 
 SIGMA = [r'$\sigma$', 0, 's']
@@ -36,7 +36,7 @@ plt.grid(True)
 
 
 directory = './graphs/'
-dpi = 500
+dpi = 200
 
 
 #END OF SETTINGS

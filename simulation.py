@@ -12,10 +12,6 @@ SIGMA = [2]
 ENERGY = np.arange(0.1, 4.6, 0.1)
 POTENTIAL_BARRIER_WIDTH = [1,2,4,8]
 
-# ENERGY = [1,1.5,2,4]
-# POTENTIAL_BARRIER_WIDTH = np.arange(0.0, 8.1,0.1)
-
-
 #axis settings
 step = 0.05
 xRange = 25
@@ -110,7 +106,7 @@ def main(sigma, potentialWidth, energy, FILE_NAME):
 		    + str(round(potentialWidth,4)) + ' ' + str(round(transmissionCoefficient,3)) + ' '
 		    + str(round(reflectionCoefficient,3)) + '\n')
 
-	# data is saved in .csv file in folder data
+	# data is saved in .txt file in folder data
 	with open('data/' + str(FILE_NAME), 'a') as file:
 		file.write(data)
 
@@ -120,8 +116,7 @@ for sigma in SIGMA:
 	for potentialWidth in POTENTIAL_BARRIER_WIDTH:
 		for energy in ENERGY:
 
-			FILE_NAME = "012-pw" + str(potentialWidth) + "-s" + str(sigma) + ".txt"
-			# FILE_NAME = "5-e" + str(energy) + "-s" + str(sigma) + ".txt"
+			FILE_NAME = "simulation_data.txt"
 
 			print "E: ", energy, " pw: ", potentialWidth, " sigma: ", sigma
 

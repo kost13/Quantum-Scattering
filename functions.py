@@ -57,7 +57,7 @@ def create_potential_function(potentialType, potentialWidth, Axis, dx=0.05):
 
     Parameters:
     potentialType - char, shape of the barrier; 'r': rectangle,
-                    't': isosceles triangle, 'rt1/2': right triangle 
+                    't': isosceles triangle, 'rt1'/'rt2': right triangle 
     potentialWidth - number, width of the potential barrier
     Axis - array like    
     dx - float, optional, step in the axis
@@ -137,14 +137,14 @@ def solve_hamiltonian(Potential, Axis, dx=0.05):
 def create_coefficients(Function, StationaryStates, dx=0.05, numberOfStates=None):
     '''
     For the given function and stationary states
-    return expansion coefficients for Fourier series and
+    return expansion coefficients and
     the sum of these coefficients.
 
     Parameters:
     Function - array like, wave function
     StationaryStates - array like, eigenvectors of the Hamiltionian
     dx - float, optional, step in the axis
-    numberOfStates - int, optional, number of states in Fourier expansion
+    numberOfStates - int, optional, number of states in the expansion
     '''
 
     if numberOfStates is None:
@@ -168,8 +168,8 @@ def create_function(t, axisLength, numberOfStates, Coefficients,
     Parameters:
     t - number, time
     axisLength - int, length of the axis
-    numberOfStates - int, number of states in Fourier expansion
-    Coefficients - array like, coefficients from Fourier expansion
+    numberOfStates - int, number of states the expansion
+    Coefficients - array like, coefficients from Fthe expansion
     SationaryStates - array like, eigenvalues of the Hamiltonian
     Energy - array like, energy of the stationary states
     TIME_COEFFICIENT - float, time coefficient
